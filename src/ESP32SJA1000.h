@@ -40,6 +40,9 @@ public:
 
   void dumpRegisters(Stream& out);
 
+  int readTEC();
+  int readREC();
+
 private:
   void reset();
 

@@ -372,6 +372,16 @@ void ESP32SJA1000Class::dumpRegisters(Stream& out)
   }
 }
 
+int ESP32SJA1000Class::readTEC()
+{
+  return readRegister(REG_TXERR);
+}
+
+int ESP32SJA1000Class::readREC()
+{
+  return readRegister(REG_RXERR);
+}
+
 void ESP32SJA1000Class::handleInterrupt()
 {
   uint8_t ir = readRegister(REG_IR);
